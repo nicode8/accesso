@@ -34,12 +34,13 @@ form{
 }
 #container-body{
     height:60%;
-    width:120%;
+    width:100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
     padding-top:2%;
+
 }
 legend{
     color:white;
@@ -116,9 +117,7 @@ legend{
     padding-right: 5%;
     padding-top: 2%;
     padding-bottom: 2%;
-  
     border-radius: 15px;
-    
     color: white;
     text-decoration: none;
 }
@@ -133,14 +132,10 @@ h2{
 #container{
     width:60%;
 }
-
+}
 @media screen and (max-width: 390px)
 {
-    form{
-        display: flex;
-        justify-content: flex-start;
-
-    }
+   
     #container
     {
     width:70%;
@@ -149,10 +144,12 @@ h2{
     #container-body{
     display: flex;
     justify-content: flex-start;
+    box-sizing: border-box;
+    
     
     }
     h2{
-        font-size: 210%;
+        font-size: 200%;
     }
     #email{
     height:17%;
@@ -161,6 +158,7 @@ h2{
     border:none;
     margin-bottom: 10%;
     padding-left: 2%;
+    font-size:110%;
    
     }
     #pass_btn{
@@ -168,11 +166,20 @@ h2{
     }
     #hideShow{
     width:18%;
-    
-    
     }
-}
-
+    #passw{
+    font-size:110%;
+    width:55%;
+    }  
+    #submitt{
+    
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    }  
+    #reg{
+    font-size:120%;
+    }
 }
 </style>
 </head>
@@ -182,13 +189,13 @@ h2{
     <fieldset id="container">
         <legend><h1>Accedi</h1></legend>
         <div id="container-body">
-            <h2>Inserisci E-mail</h2>
-        <input type="text"  id="email" name="email" value="" placeholder=" Inserire e-mail" size="15">
-        <h2>Inserisci Password</h2>
-        <div id="pass_btn">
-            <input type="password" class="input" id="passw" name="passw" value="" placeholder=" Inserire password" size="15">
-             <img src="open_eye.png" id="hideShow">
-        </div>
+                <h2>Inserisci E-mail</h2>
+            <input type="text"  id="email" name="email" value="" placeholder=" Inserire e-mail" size="15">
+            <h2>Inserisci Password</h2>
+            <div id="pass_btn">
+                <input type="password" class="input" id="passw" name="passw" value="" placeholder=" Inserire password" size="15">
+                <img src="open_eye.png" id="hideShow">
+            </div>
         </div>
         <div id="submitt">
         <input type="submit" id="sbmt" name="sbmt" value="Accedi">
