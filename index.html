@@ -65,14 +65,14 @@ legend{
 
 }
 #hideShow{
-    background-color: white;
-    height: 70%;
     width:fit-content;
     padding-left:5%;
     padding-right:5%;
     font-size: 80%;
     border:none;
     border-radius: 5px;
+    height:85%;
+    
 }
 
 #pass_btn{
@@ -124,7 +124,103 @@ legend{
 }
 h2{
     color:white;
+    
+}
+
+@media screen and (max-width: 500px){
+
+    
+form{
+
+height:100vh;
+     
+}
+
+#container{
+    width:60%;
+    height:60%;
+    padding-left: 10%;
+    padding-right: 10%;
+    border-radius: 15px;
+    padding-bottom: 0%;
+    
+    
+}
+#container-body{
+    height:60%;
+    width:120%;
+    padding-top:2%;
+}
+
+#container input{
+    margin-bottom: 1rem;
+}
+#email{
+    height:15%;
+    width:70%;
+    border-radius: 15px;
+    margin-bottom: 10%;
+    padding-left: 2%;
+   
+}
+#passw{
+    height:100%;
+    width:50%;
+    border-radius: 15px;
+    
+
+}
+#hideShow{
+    width:fit-content;
+    padding-left:5%;
+    padding-right:5%;
+    font-size: 80%;
+    border:none;
+    border-radius: 5px;
+    height:85%;
+    
+}
+
+#pass_btn{
+    width:100%; 
+    height: 15%;
+    padding-right: 10%;
+   
+    
+    
+    
+}
+#submitt{
+    height: 20%;
+    width: 120%;
+    
+}
+
+#sbmt{
+
+    height: 60%;
+   
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    font-size: 150%;
+    border-radius: 15px;
+   
+    
+}
+#reg{
+    height: 30%;
+    width: fit-content;
     padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    border-radius: 15px;
+    
+}
+
+
 }
 </style>
 </head>
@@ -139,7 +235,7 @@ h2{
         <h2>Inserisci Password</h2>
         <div id="pass_btn">
             <input type="password" class="input" id="passw" name="passw" value="" placeholder=" Inserire password" size="15">
-            <input type="button" id="hideShow" name="hideShow" value="mostra" onClick="mostrapass();">
+             <img src="open_eye.png" id="hideShow">
         </div>
         </div>
         <div id="submitt">
@@ -155,6 +251,7 @@ h2{
 
 
 <script type="text/javascript">
+ hideShow.addEventListener("click",mostrapass)
 
     function mostrapass()
     {   
@@ -164,7 +261,7 @@ h2{
         if(input.type=="password")
             {
                 input.type="text";
-                text.value= "nascondi";
+                text.src= "occhio_chiuso.png";
 
             }   
 
@@ -172,7 +269,7 @@ h2{
         else
             {
                 input.type="password";
-                text.value="mostra";
+                text.src="open_eye.png";
             }
 
     }

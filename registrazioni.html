@@ -49,7 +49,7 @@ legend{
     margin-bottom: 1rem;
 }
 .inputt{
-    height:100%;
+    height:10%;
     width:70%;
     border-radius: 15px;
     border:none;
@@ -62,17 +62,20 @@ legend{
     width:50%;
     border-radius: 15px;
     border:none;
+   
 
 }
 #hideShow{
-    background-color: white;
-    height: 70%;
+    
+    
     width:fit-content;
     padding-left:5%;
     padding-right:5%;
     font-size: 80%;
     border:none;
     border-radius: 5px;
+    height:85%;
+    
 }
 
 #pass_btn{
@@ -80,11 +83,10 @@ legend{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 100%;
+    height: 10%;
     padding-right: 10%;
     box-sizing: border-box;
-    
-    
+  
     
     
 }
@@ -127,7 +129,7 @@ legend{
 
 h2{
     color:white;
-    padding-left: 5%;
+    
 }
 </style>
 </head>
@@ -145,8 +147,9 @@ h2{
             <input type="text"  class="inputt" id="email" name="email" value="" placeholder=" Inserire e-mail" size="15">
             <h2>Inserisci Password</h2>
             <div id="pass_btn">
-                <input type="password" class="input" id="passw" name="passw" value="" placeholder=" Inserire password" size="15">
-                <input type="button" id="hideShow" name="hideShow" value="mostra" onClick="mostrapass();">
+                <input type="password" class="inputt" id="passw" name="passw" value="" placeholder=" Inserire password" size="15">
+                <img src="open_eye.png" id="hideShow">
+                   
             </div>
         </div>
         <div id="submitt">
@@ -163,6 +166,8 @@ h2{
 
 <script type="text/javascript">
 
+    hideShow.addEventListener("click",mostrapass)
+
     function mostrapass()
     {   
         
@@ -171,7 +176,7 @@ h2{
         if(input.type=="password")
             {
                 input.type="text";
-                text.value= "nascondi";
+                text.src= "occhio_chiuso.png";
 
             }   
 
@@ -179,7 +184,7 @@ h2{
         else
             {
                 input.type="password";
-                text.value="mostra";
+                text.src="open_eye.png";
             }
 
     }
