@@ -18,7 +18,7 @@ $stmt->execute();
 $result= $stmt->get_result();
 
 if($row= $result->fetch_assoc())
-    header("Location: registrazioni.html");
+    header("Location: homepage.html");
 else
     echo"errore";
 $conn->close();
