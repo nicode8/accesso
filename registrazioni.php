@@ -1,6 +1,6 @@
 <?php
-
-$conn= new mysqli("localhost","root","","chat");
+require 'config.php';
+$conn= new mysqli($DB_host,$DB_user,$DB_pass,$DB_name);
 
 if($conn->connect_error)
     die("errore");
